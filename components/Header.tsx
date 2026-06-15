@@ -29,7 +29,7 @@ export default function Header() {
                   margin: 0,
                   letterSpacing: '-0.5px'
                 }}>
-                  Duong Nguyen
+                  Dao Nguyen Duong
                 </h1>
                 <span style={{
                   fontSize: '0.75rem',

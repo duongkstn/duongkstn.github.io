@@ -19,17 +19,17 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
   return (
     <div>
       {/* Category Filter */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-[#6b7280] uppercase tracking-wider mb-4">
+      <div className="mb-12">
+        <h3 className="text-xs font-bold text-[#6b7280] uppercase tracking-widest mb-4">
           Filter by Category
-        </h2>
-        <div className="flex flex-wrap gap-2">
+        </h3>
+        <div className="flex flex-wrap gap-3">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
               selectedCategory === null
-                ? 'bg-[#6366f1] text-white'
-                : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1]'
+                ? 'bg-[#6366f1] text-white shadow-md'
+                : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1] hover:bg-gray-50'
             }`}
           >
             All
@@ -38,10 +38,10 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 selectedCategory === category
-                  ? 'bg-[#6366f1] text-white'
-                  : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1]'
+                  ? 'bg-[#6366f1] text-white shadow-md'
+                  : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1] hover:bg-gray-50'
               }`}
             >
               {category}
@@ -51,20 +51,20 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
       </div>
 
       {/* Blog List */}
-      <div className="space-y-8">
+      <div className="space-y-10">
         {filteredBlogs.length === 0 ? (
-          <p className="text-[#6b7280]">No blog posts found.</p>
+          <p className="text-[#6b7280] text-lg">No blog posts found.</p>
         ) : (
           filteredBlogs.map((blog) => (
             <article
               key={blog.slug}
-              className="pb-8 border-b border-[#e5e7eb] last:border-b-0"
+              className="pb-10 border-b border-[#e5e7eb] last:border-b-0 hover:bg-gray-50 transition-colors p-4 -mx-4 rounded-lg"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-xs font-semibold text-[#6366f1] uppercase tracking-wider">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-xs font-bold text-[#6366f1] uppercase tracking-widest bg-[#f0f0ff] px-3 py-1 rounded-full">
                   {blog.category}
                 </span>
-                <time className="text-xs text-[#6b7280]">
+                <time className="text-xs font-medium text-[#9ca3af]">
                   {new Date(blog.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
@@ -73,14 +73,14 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
                 </time>
               </div>
               <Link href={`/blog/${blog.slug}`}>
-                <h3 className="text-xl font-bold text-[#1f2937] hover:text-[#6366f1] transition-colors mb-2">
+                <h3 className="text-2xl font-bold text-[#1f2937] hover:text-[#6366f1] transition-colors mb-3">
                   {blog.title}
                 </h3>
               </Link>
-              <p className="text-[#6b7280] mb-4">{blog.description}</p>
+              <p className="text-[#6b7280] mb-5 text-lg leading-relaxed">{blog.description}</p>
               <Link
                 href={`/blog/${blog.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-medium text-[#6366f1] hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#6366f1] hover:gap-3 transition-all uppercase tracking-wider"
               >
                 Read More <span>→</span>
               </Link>

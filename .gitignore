@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Personal files
+CV_of_DaoNguyenDuong.pdf
+*.pdf:Zone.Identifier

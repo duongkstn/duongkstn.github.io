@@ -1,12 +1,17 @@
 // app/layout.tsx
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import Header from '@/components/Header';
 import ProfileCard from '@/components/ProfileCard';
 import '../styles/globals.css';
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: 'Duong Nguyen | AI Engineer',
-  description: 'AI Engineer & Software Engineer Portfolio',
-  viewport: 'width=device-width, initial-scale=1',
+  title: 'Dao Nguyen Duong | AI Engineer',
+  description: 'AI Engineer Portfolio',
 };
 
 export default function RootLayout({
@@ -16,10 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="min-h-screen flex flex-col md:flex-row bg-[#fafafa]">
+      <body className="bg-[#fafafa]">
+        <Header />
+        <div className="min-h-screen flex flex-col lg:flex-row">
           <ProfileCard />
-          <main className="flex-1 p-6 md:p-8">
+          <main className="flex-1 p-6 md:p-8 lg:p-12">
             {children}
           </main>
         </div>

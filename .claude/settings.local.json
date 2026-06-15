@@ -2,7 +2,41 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Bash(npx create-next-app@latest *)"
+      "Bash(npx create-next-app@latest *)",
+      "Bash(kill 40390)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill *)",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s http://localhost:3000/blog)",
+      "Bash(curl -s http://localhost:3000/blog/2026-06-15-getting-started)",
+      "Bash(kill 48341)",
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(git commit -m 'feat: create dynamic blog post page with static params *)",
+      "Bash(curl -s http://localhost:3000/resume)",
+      "Bash(curl -s http://localhost:3000/editor)",
+      "Bash(curl -s http://10.255.255.254:3000/editor)",
+      "Bash(npm list *)",
+      "Bash(npm install *)",
+      "Bash(npx serve *)",
+      "Bash(curl -s http://localhost:5000/)",
+      "Bash(git commit *)",
+      "Bash(kill 66765)",
+      "Bash(export no_proxy=localhost,127.0.0.1,stg.fptcloud.net)",
+      "Bash(sleep 5)",
+      "Read(//mnt/c/Users/DuongDN8/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/**)",
+      "Bash(bash scripts/start-server.sh --project-dir /home/duongdn8/profile)",
+      "Bash(xargs cat)",
+      "Bash(netstat -tuln)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(bash /home/duongdn8/.claude/plugins/cache/temp_git_1781495552744_l27hna/skills/brainstorming/scripts/start-server.sh --project-dir /home/duongdn8/profile)",
+      "Bash(curl -s \"https://drive.google.com/file/d/1akRc_J51CDIXZ8yo9LEyOxWLxoSaAMUG/view\" -L)",
+      "Bash(kill 152587)",
+      "Bash(kill 182105)",
+      "Bash(curl -s http://localhost:3001/life)",
+      "Bash(npm test *)"
     ]
   }
 }

@@ -2,7 +2,7 @@ import BlogList from '@/components/BlogList';
 import { getAllBlogs, getCategories } from '@/lib/blog';
 
 export const metadata = {
-  title: 'Blog | Duong Nguyen',
+  title: 'Blog | Dao Nguyen Duong',
   description: 'Articles on AI, machine learning, and software engineering',
 };
 
@@ -11,13 +11,31 @@ export default function BlogPage() {
   const categories = getCategories();
 
   return (
-    <div className="max-w-4xl">
-      <header className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#1f2937] mb-4">
+    <div style={{ maxWidth: '900px', marginRight: 'auto', marginLeft: 'auto' }}>
+      <header style={{
+        marginBottom: '3rem',
+        paddingTop: '2rem',
+        paddingBottom: '2rem',
+        background: 'linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%)',
+        borderRadius: '1rem',
+        padding: '3rem'
+      }}>
+        <h1 style={{
+          fontSize: '3rem',
+          fontWeight: '800',
+          color: '#0f172a',
+          marginBottom: '1rem',
+          lineHeight: '1.1'
+        }}>
           Blog
         </h1>
-        <p className="text-lg text-[#6b7280]">
-          Thoughts on AI, machine learning, and software engineering.
+        <p style={{
+          fontSize: '1.125rem',
+          color: '#475569',
+          lineHeight: '1.6',
+          maxWidth: '600px'
+        }}>
+          Thoughts and insights on AI, machine learning, and software engineering. Exploring production systems, LLMs, and clean architecture.
         </p>
       </header>
 
