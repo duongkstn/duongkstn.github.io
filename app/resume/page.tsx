@@ -1,136 +1,288 @@
-// app/resume/page.tsx
 import Link from 'next/link';
+import { resumeData } from '@/lib/resume-data';
 
 export const metadata = {
-  title: 'Resume | Duong Nguyen',
-  description: 'Resume and CV for Duong Nguyen',
+  title: 'Resume | Dao Nguyen Duong',
+  description: 'Resume and CV for Dao Nguyen Duong - AI Engineer & Software Engineer',
 };
 
 export default function ResumePage() {
   return (
-    <div className="max-w-4xl">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold text-[#1f2937] mb-2">Duong Nguyen</h1>
-        <p className="text-lg text-[#6366f1] font-semibold mb-4">
-          AI Engineer · Software Engineer
+    <div style={{ maxWidth: '900px', marginRight: 'auto', marginLeft: 'auto', paddingLeft: '1rem', paddingRight: '1rem' }}>
+      {/* Header */}
+      <header style={{ marginBottom: '3rem', paddingTop: '2rem' }}>
+        <h1 style={{
+          fontSize: '2.5rem',
+          fontWeight: '800',
+          color: '#0f172a',
+          marginBottom: '0.5rem'
+        }}>
+          {resumeData.name}
+        </h1>
+        <p style={{
+          fontSize: '1rem',
+          color: '#10b981',
+          fontWeight: '600',
+          marginBottom: '1rem'
+        }}>
+          {resumeData.title}
         </p>
-        <p className="text-[#6b7280] mb-6">
-          Email:{' '}
-          <a href="mailto:duongdn8@fpt.com" className="text-[#6366f1]">
-            duongdn8@fpt.com
-          </a>{' '}
-          | GitHub:{' '}
-          <a
-            href="https://github.com/duongkstn"
-            className="text-[#6366f1]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            duongkstn
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: '#64748b', fontSize: '0.875rem' }}>
+          <a href={`mailto:${resumeData.contact.email}`} style={{ color: '#10b981', textDecoration: 'none', fontWeight: '500' }}>
+            {resumeData.contact.email}
           </a>
-        </p>
+          {resumeData.contact.phone && (
+            <span style={{ color: '#475569', fontWeight: '500' }}>
+              {resumeData.contact.phone}
+            </span>
+          )}
+          {resumeData.contact.location && (
+            <span style={{ color: '#475569', fontWeight: '500' }}>
+              {resumeData.contact.location}
+            </span>
+          )}
+          {resumeData.contact.github && (
+            <a href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981', textDecoration: 'none', fontWeight: '500' }}>
+              GitHub
+            </a>
+          )}
+          {resumeData.contact.linkedin && (
+            <a href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981', textDecoration: 'none', fontWeight: '500' }}>
+              LinkedIn
+            </a>
+          )}
+        </div>
       </header>
 
-      {/* About */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1f2937] mb-4">About</h2>
-        <p className="text-[#6b7280] leading-relaxed">
-          AI engineer passionate about building production-ready machine learning systems. Experienced in LLMs, deep learning, and full-stack software engineering. Strong foundation in Python, distributed systems, and software architecture.
+      {/* Professional Summary */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1rem' }}>Professional Summary</h2>
+        <p style={{ color: '#475569', lineHeight: '1.8', fontSize: '0.95rem', whiteSpace: 'pre-wrap' }}>
+          {resumeData.summary}
         </p>
       </section>
 
-      {/* Experience */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1f2937] mb-4">Experience</h2>
-        <div className="space-y-8">
-          <div>
-            <div className="flex items-start justify-between mb-2">
-              <h3 className="text-lg font-semibold text-[#1f2937]">
-                AI Engineer / ML Engineer
-              </h3>
-              <span className="text-sm text-[#6b7280]">2021 - Present</span>
-            </div>
-            <p className="text-[#6366f1] font-medium mb-2">Your Company</p>
-            <ul className="text-[#6b7280] space-y-1 ml-4">
-              <li>• Built and deployed production ML models using Python and PyTorch</li>
-              <li>• Developed LLM-based applications with prompt engineering and fine-tuning</li>
-              <li>• Optimized model inference performance and reduced latency by 40%</li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="flex items-start justify-between mb-2">
-              <h3 className="text-lg font-semibold text-[#1f2937]">
-                Software Engineer
-              </h3>
-              <span className="text-sm text-[#6b7280]">2019 - 2021</span>
-            </div>
-            <p className="text-[#6366f1] font-medium mb-2">Startup / Company</p>
-            <ul className="text-[#6b7280] space-y-1 ml-4">
-              <li>• Developed full-stack web applications using React and Node.js</li>
-              <li>• Designed and implemented REST APIs with proper architecture</li>
-              <li>• Mentored junior developers on best practices</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1f2937] mb-4">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {[
-            'Python',
-            'PyTorch',
-            'TensorFlow',
-            'LLMs',
-            'React',
-            'Node.js',
-            'TypeScript',
-            'PostgreSQL',
-            'Docker',
-            'AWS',
-            'Git',
-            'Machine Learning',
-          ].map((skill) => (
+      {/* Work Experience */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.5rem' }}>Work Experience</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {resumeData.experience.map((exp, index) => (
             <div
-              key={skill}
-              className="px-4 py-2 bg-white border border-[#e5e7eb] rounded-lg text-sm font-medium text-[#1f2937]"
+              key={exp.id}
+              style={{
+                paddingBottom: index !== resumeData.experience.length - 1 ? '1.5rem' : '0',
+                borderBottom: index !== resumeData.experience.length - 1 ? '1px solid #e2e8f0' : 'none'
+              }}
             >
-              {skill}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#0f172a' }}>
+                  {exp.title}
+                </h3>
+                <span style={{ fontSize: '0.875rem', color: '#64748b', whiteSpace: 'nowrap' }}>
+                  {exp.startDate} - {exp.endDate}
+                </span>
+              </div>
+              <p style={{ color: '#10b981', fontWeight: '600', marginBottom: '0.75rem', fontSize: '0.9rem' }}>
+                {exp.company}
+              </p>
+              <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.8', marginBottom: '0.75rem' }}>
+                {exp.description}
+              </p>
+              {exp.achievements && exp.achievements.length > 0 && (
+                <>
+                  <p style={{ fontWeight: '600', color: '#0f172a', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
+                    Key Achievements:
+                  </p>
+                  <ul style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.8', marginLeft: '1rem', marginBottom: '0.75rem' }}>
+                    {exp.achievements.map((achievement, idx) => (
+                      <li key={idx}>• {achievement}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {exp.technologies && exp.technologies.length > 0 && (
+                <>
+                  <p style={{ fontWeight: '600', color: '#0f172a', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
+                    Technologies:
+                  </p>
+                  <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    {exp.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        style={{
+                          padding: '0.25rem 0.75rem',
+                          backgroundColor: '#e0f2fe',
+                          border: '1px solid #7dd3fc',
+                          borderRadius: '0.375rem',
+                          fontSize: '0.8rem',
+                          color: '#0c4a6e',
+                          fontWeight: '500'
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>
       </section>
 
       {/* Education */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1f2937] mb-4">Education</h2>
-        <div>
-          <div className="flex items-start justify-between mb-2">
-            <h3 className="text-lg font-semibold text-[#1f2937]">
-              Bachelor of Science in Computer Science
-            </h3>
-            <span className="text-sm text-[#6b7280]">Graduation Year</span>
-          </div>
-          <p className="text-[#6366f1] font-medium">University Name</p>
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.5rem' }}>Education</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {resumeData.education.map((edu) => (
+            <div key={edu.id} style={{ paddingBottom: '1.5rem', borderBottom: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#0f172a' }}>
+                  {edu.degree} in {edu.field}
+                </h3>
+                <span style={{ fontSize: '0.875rem', color: '#64748b', whiteSpace: 'nowrap' }}>
+                  {edu.year}
+                </span>
+              </div>
+              <p style={{ color: '#10b981', fontWeight: '600', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+                {edu.school}
+              </p>
+              {edu.details && (
+                <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  {edu.details}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Download Section */}
-      <section className="border-t border-[#e5e7eb] pt-8">
-        <p className="text-[#6b7280] mb-4">
-          For a downloadable PDF version, please{' '}
-          <a href="mailto:duongdn8@fpt.com" className="text-[#6366f1] font-medium">
-            contact me
-          </a>
-          .
-        </p>
+      {/* Skills */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.5rem' }}>Skills</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {resumeData.skills.map((skillCategory) => (
+            <div key={skillCategory.category}>
+              <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#0f172a', marginBottom: '0.75rem' }}>
+                {skillCategory.category}
+              </h3>
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                {skillCategory.items.map((skill) => (
+                  <span
+                    key={skill}
+                    style={{
+                      padding: '0.5rem 1rem',
+                      backgroundColor: '#f0fdf4',
+                      border: '1px solid #bbf7d0',
+                      borderRadius: '0.5rem',
+                      fontSize: '0.875rem',
+                      fontWeight: '500',
+                      color: '#0f172a'
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Awards & Honors */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.5rem' }}>Awards & Honors</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {resumeData.awards.map((award) => (
+            <div
+              key={award.id}
+              style={{
+                padding: '1rem',
+                backgroundColor: '#fef3c7',
+                border: '1px solid #fde68a',
+                borderLeft: '4px solid #f59e0b',
+                borderRadius: '0.375rem'
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#0f172a' }}>
+                  {award.title}
+                </h3>
+                <span style={{ fontSize: '0.875rem', color: '#64748b', whiteSpace: 'nowrap' }}>
+                  {award.date}
+                </span>
+              </div>
+              <p style={{ color: '#92400e', fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
+                {award.issuer}
+              </p>
+              {award.description && (
+                <p style={{ color: '#78350f', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  {award.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Expertise */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.5rem' }}>Expertise</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          {resumeData.expertise.map((exp) => (
+            <div
+              key={exp.id}
+              style={{
+                padding: '1.5rem',
+                backgroundColor: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: '0.5rem'
+              }}
+            >
+              <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#0f172a', marginBottom: '0.75rem' }}>
+                {exp.area}
+              </h3>
+              <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+                {exp.description}
+              </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                {exp.relatedSkills.map((skill) => (
+                  <span
+                    key={skill}
+                    style={{
+                      padding: '0.25rem 0.75rem',
+                      backgroundColor: '#dbeafe',
+                      border: '1px solid #93c5fd',
+                      borderRadius: '0.375rem',
+                      fontSize: '0.75rem',
+                      fontWeight: '500',
+                      color: '#1e40af'
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section style={{ borderTop: '1px solid #e2e8f0', paddingTop: '2rem', marginBottom: '2rem' }}>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-[#6366f1] hover:gap-3 transition-all font-medium"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            color: '#10b981',
+            textDecoration: 'none',
+            fontWeight: '600',
+            fontSize: '0.9rem'
+          }}
         >
-          <span>←</span> Back home
+          <span>←</span> Back to home
         </Link>
       </section>
     </div>
