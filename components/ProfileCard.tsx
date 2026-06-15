@@ -1,20 +1,12 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function ProfileCard() {
   return (
     <aside className="hidden md:flex flex-col w-80 bg-white border-r border-[#e5e7eb] p-8 sticky top-0 h-screen overflow-y-auto">
       {/* Profile Photo */}
       <div className="mb-6">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/images/profile.jpg"
-            alt="Duong Nguyen"
-            width={96}
-            height={96}
-            className="w-full h-full object-cover"
-            priority
-          />
+        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center overflow-hidden text-white font-bold text-2xl">
+          DN
         </div>
       </div>
 
