@@ -36,7 +36,10 @@
       "Bash(kill 152587)",
       "Bash(kill 182105)",
       "Bash(curl -s http://localhost:3001/life)",
-      "Bash(npm test *)"
+      "Bash(npm test *)",
+      "Bash(convert *)",
+      "Bash(identify /home/duongkstn/profile/public/images/profile.jpg)",
+      "Read(//tmp/**)"
     ]
   }
 }
