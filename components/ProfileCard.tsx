@@ -3,7 +3,7 @@
 export default function ProfileCard() {
   return (
     <aside style={{
-      display: 'none',
+      display: 'flex',
       flexDirection: 'column',
       width: '280px',
       backgroundColor: '#f8fafc',
@@ -14,6 +14,25 @@ export default function ProfileCard() {
       height: 'calc(100vh - 65px)',
       overflowY: 'auto'
     }}>
+
+      {/* Profile Image */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '1.5rem'
+      }}>
+        <img
+          src="/images/profile.jpg"
+          alt="Dao Nguyen Duong"
+          style={{
+            width: '160px',
+            height: '160px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+          }}
+        />
+      </div>
 
       {/* Name */}
       <h2 style={{
