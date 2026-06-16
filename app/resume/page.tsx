@@ -142,11 +142,6 @@ export default function ResumePage() {
           <a href={`mailto:${resumeData.contact.email}`} style={{ color: colors.emerald, textDecoration: 'none', fontWeight: '500' }}>
             {resumeData.contact.email}
           </a>
-          {resumeData.contact.phone && (
-            <span style={{ color: colors.slateGray, fontWeight: '500' }}>
-              {resumeData.contact.phone}
-            </span>
-          )}
           {resumeData.contact.location && (
             <span style={{ color: colors.slateGray, fontWeight: '500' }}>
               {resumeData.contact.location}
