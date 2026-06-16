@@ -21,26 +21,15 @@ export default function Header() {
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             {/* Logo/Name */}
             <Link href="/" style={{textDecoration: 'none', color: 'inherit'}}>
-              <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
-                <h1 style={{
-                  fontSize: '1.125rem',
-                  fontWeight: '700',
-                  color: '#0f172a',
-                  margin: 0,
-                  letterSpacing: '-0.5px'
-                }}>
-                  Dao Nguyen Duong
-                </h1>
-                <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: '600',
-                  color: '#10b981',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em'
-                }}>
-                  AI Engineer
-                </span>
-              </div>
+              <h1 style={{
+                fontSize: '1.125rem',
+                fontWeight: '700',
+                color: '#0f172a',
+                margin: 0,
+                letterSpacing: '-0.5px'
+              }}>
+                Dao Nguyen Duong
+              </h1>
             </Link>
 
             {/* Navigation */}
