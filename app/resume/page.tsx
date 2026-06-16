@@ -309,36 +309,6 @@ export default function ResumePage() {
         </div>
       </section>
 
-      {/* Expertise */}
-      <section style={{ marginBottom: '3rem' }}>
-        <h2 style={styles.h2}>Expertise</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
-          {resumeData.expertise.map((exp) => (
-            <div
-              key={exp.id}
-              style={styles.expertiseBox}
-            >
-              <h3 style={styles.sectionTitle}>
-                {exp.area}
-              </h3>
-              <p style={{ color: colors.slateGray, fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-                {exp.description}
-              </p>
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                {exp.relatedSkills.map((skill) => (
-                  <span
-                    key={skill}
-                    style={styles.relatedSkillTag}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Footer */}
       <section style={{ borderTop: `1px solid ${colors.border}`, paddingTop: '2rem', marginBottom: '2rem' }}>
         <Link
