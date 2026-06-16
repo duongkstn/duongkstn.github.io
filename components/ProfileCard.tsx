@@ -39,22 +39,11 @@ export default function ProfileCard() {
         fontSize: '1.125rem',
         fontWeight: '700',
         color: '#0f172a',
-        margin: 0
+        margin: 0,
+        marginBottom: '2rem'
       }}>
         Dao Nguyen Duong
       </h2>
-
-      {/* Title */}
-      <p style={{
-        fontSize: '0.75rem',
-        fontWeight: '600',
-        color: '#10b981',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        margin: '0 0 1.5rem 0'
-      }}>
-        AI Engineer
-      </p>
 
 
       {/* Divider */}
