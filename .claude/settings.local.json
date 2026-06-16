@@ -39,7 +39,14 @@
       "Bash(npm test *)",
       "Bash(convert *)",
       "Bash(identify /home/duongkstn/profile/public/images/profile.jpg)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Skill(run)",
+      "Bash(kill 25035)",
+      "Bash(npx next *)",
+      "Bash(npx playwright *)",
+      "Bash(curl -s -L http://localhost:3000/resume)",
+      "Bash(python3 -c \"import sys, re; content = sys.stdin.read\\(\\); print\\(re.sub\\(r'<[^>]+>', ' ', content\\)\\)\")",
+      "Bash(curl -v http://localhost:3000/)"
     ]
   }
 }
