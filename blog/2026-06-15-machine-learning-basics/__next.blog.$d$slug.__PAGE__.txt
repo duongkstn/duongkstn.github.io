@@ -1,0 +1,106 @@
+1:"$Sreact.fragment"
+5:I[97367,["/_next/static/chunks/3s767i43iwu5i.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+2:T17c7,<h1>What is Machine Learning?</h1>
+<p>Machine Learning (ML) is one of the most transformative technologies of our time. At its core, it’s about enabling computers to learn from data without being explicitly programmed. Instead of writing code to handle every scenario, we feed data to algorithms that discover patterns and make predictions.</p>
+<h2>The Basic Concept</h2>
+<p>Traditional programming follows a simple formula:</p>
+<ul>
+<li><strong>Input</strong> → <strong>Code</strong> → <strong>Output</strong></li>
+</ul>
+<p>Machine Learning flips this:</p>
+<ul>
+<li><strong>Data</strong> → <strong>Algorithm</strong> → <strong>Model</strong> → <strong>Predictions</strong></li>
+</ul>
+<p>The key difference is that the “rules” aren’t hardcoded—they’re learned from examples.</p>
+<h2>Three Main Types of Machine Learning</h2>
+<h3>1. Supervised Learning</h3>
+<p>The algorithm learns from labeled examples. Each data point comes with a correct answer.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>Classification</strong>: Predicting whether an email is spam or not</li>
+<li><strong>Regression</strong>: Predicting house prices based on features like size, location, and age</li>
+</ul>
+<p><strong>Real-world applications:</strong> Email filtering, medical diagnosis, credit scoring, image recognition</p>
+<h3>2. Unsupervised Learning</h3>
+<p>The algorithm finds patterns in unlabeled data without knowing the “correct” answer.</p>
+<p><strong>Common techniques:</strong></p>
+<ul>
+<li><strong>Clustering</strong>: Grouping similar items together</li>
+<li><strong>Dimensionality reduction</strong>: Simplifying complex data</li>
+</ul>
+<p><strong>Real-world applications:</strong> Customer segmentation, recommendation systems, anomaly detection</p>
+<h3>3. Reinforcement Learning</h3>
+<p>The algorithm learns by interacting with an environment and receiving rewards or penalties for actions.</p>
+<p><strong>Real-world applications:</strong> Game-playing AI, robotics, autonomous vehicles, recommendation systems</p>
+<h2>The Machine Learning Pipeline</h2>
+<pre><code>1. Data Collection
+   ↓
+2. Data Preprocessing (cleaning, transformation)
+   ↓
+3. Feature Engineering (selecting relevant information)
+   ↓
+4. Model Selection (choosing the right algorithm)
+   ↓
+5. Training (feeding data to the model)
+   ↓
+6. Evaluation (testing on unseen data)
+   ↓
+7. Deployment (putting the model into production)
+</code></pre>
+<h2>Key Concepts</h2>
+<h3>Training Data</h3>
+<p>The examples used to teach the model. The more quality data you have, the better the model typically performs.</p>
+<h3>Features</h3>
+<p>The input variables that the model uses to make predictions. Good feature engineering is crucial for success.</p>
+<h3>Model</h3>
+<p>The mathematical representation that captures the learned patterns. It transforms input features into predictions.</p>
+<h3>Evaluation Metrics</h3>
+<p>Methods to measure how well a model performs:</p>
+<ul>
+<li><strong>Accuracy</strong>: How many predictions were correct?</li>
+<li><strong>Precision &amp; Recall</strong>: Useful for imbalanced datasets</li>
+<li><strong>F1-Score</strong>: A balanced measure of precision and recall</li>
+</ul>
+<h3>Overfitting</h3>
+<p>When a model memorizes the training data instead of learning general patterns. It performs well on training data but poorly on new data.</p>
+<h2>Real-World Examples</h2>
+<h3>Recommendation Systems</h3>
+<p>Netflix uses ML to predict which movies you’ll like based on your viewing history and similar users’ preferences.</p>
+<h3>Natural Language Processing</h3>
+<p>Google’s translation service uses deep learning to understand language and provide accurate translations.</p>
+<h3>Computer Vision</h3>
+<p>Self-driving cars use ML to recognize pedestrians, other vehicles, and road signs in real-time.</p>
+<h3>Predictive Maintenance</h3>
+<p>Manufacturing companies use ML models to predict equipment failures before they happen, saving costs and downtime.</p>
+<h2>Why Machine Learning Matters</h2>
+<ol>
+<li><strong>Handling complexity</strong>: Patterns that are too complex for humans to code are easy for ML</li>
+<li><strong>Automation at scale</strong>: Once trained, models can make millions of predictions instantly</li>
+<li><strong>Continuous improvement</strong>: Models can be retrained with new data to adapt to changing patterns</li>
+<li><strong>Data insights</strong>: ML can uncover hidden patterns that lead to business insights</li>
+</ol>
+<h2>Challenges and Considerations</h2>
+<ul>
+<li><strong>Data quality</strong>: Garbage in, garbage out. Poor data leads to poor models</li>
+<li><strong>Computational cost</strong>: Training large models requires significant computing power</li>
+<li><strong>Interpretability</strong>: Deep learning models can be “black boxes” that are hard to understand</li>
+<li><strong>Bias</strong>: Models can perpetuate or amplify biases present in training data</li>
+<li><strong>Deployment complexity</strong>: Moving from a prototype to production is non-trivial</li>
+</ul>
+<h2>The Future of Machine Learning</h2>
+<p>The field is rapidly evolving:</p>
+<ul>
+<li><strong>Large Language Models (LLMs)</strong>: GPT, Claude, and similar models show the power of scale</li>
+<li><strong>Few-shot learning</strong>: Models learning from minimal examples</li>
+<li><strong>Federated learning</strong>: Training on distributed data without centralizing it</li>
+<li><strong>AutoML</strong>: Automating the ML pipeline itself</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Machine Learning is no longer just academic theory—it’s shaping how businesses operate and how we interact with technology. Whether you’re interested in improving your career prospects, building better products, or simply understanding the technology around you, understanding ML fundamentals is increasingly essential.</p>
+<p>The journey into machine learning starts with understanding these basics. From here, you can dive deeper into specific algorithms, frameworks, and applications that interest you.</p>
+<p><strong>Happy learning!</strong></p>
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-4xl","children":[["$","article",null,{"className":"max-w-3xl","children":[["$","header",null,{"className":"mb-8","children":[["$","div",null,{"className":"flex items-center gap-3 mb-4","children":[["$","span",null,{"className":"text-xs font-semibold text-[#6366f1] uppercase tracking-wider","children":"AI & ML"}],["$","time",null,{"className":"text-xs text-[#6b7280]","children":"June 15, 2026"}]]}],["$","h1",null,{"className":"text-4xl font-bold text-[#1f2937] mb-4","children":"What is Machine Learning?"}],["$","p",null,{"className":"text-lg text-[#6b7280]","children":"A comprehensive introduction to machine learning, covering fundamentals, types, and real-world applications."}]]}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-8","children":[["$","span","machine-learning",{"className":"text-xs font-medium text-[#6366f1] bg-[#f3f4f6] px-3 py-1 rounded-full","children":"machine-learning"}],["$","span","ai",{"className":"text-xs font-medium text-[#6366f1] bg-[#f3f4f6] px-3 py-1 rounded-full","children":"ai"}],["$","span","fundamentals",{"className":"text-xs font-medium text-[#6366f1] bg-[#f3f4f6] px-3 py-1 rounded-full","children":"fundamentals"}]]}],["$","div",null,{"className":"prose prose-invert max-w-none text-[#1f2937]","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],"$L3"]}],null,"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"E-CZBHsN807DwDr-dM7n4"}
+3:["$","nav",null,{"className":"mt-16 pt-8 border-t border-[#e5e7eb]","children":["$","a",null,{"href":"/blog","className":"inline-flex items-center gap-2 text-[#6366f1] hover:gap-3 transition-all font-medium","children":[["$","span",null,{"children":"←"}]," Back to all posts"]}]}]
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

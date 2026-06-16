@@ -1,0 +1,133 @@
+1:"$Sreact.fragment"
+2:I[23663,["/_next/static/chunks/3s767i43iwu5i.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/00h8rt8jaj15n.js"],"default"]
+6:I[97367,["/_next/static/chunks/3s767i43iwu5i.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T13fc,
+# What is Machine Learning?
+
+Machine Learning (ML) is one of the most transformative technologies of our time. At its core, it's about enabling computers to learn from data without being explicitly programmed. Instead of writing code to handle every scenario, we feed data to algorithms that discover patterns and make predictions.
+
+## The Basic Concept
+
+Traditional programming follows a simple formula:
+- **Input** → **Code** → **Output**
+
+Machine Learning flips this:
+- **Data** → **Algorithm** → **Model** → **Predictions**
+
+The key difference is that the "rules" aren't hardcoded—they're learned from examples.
+
+## Three Main Types of Machine Learning
+
+### 1. Supervised Learning
+
+The algorithm learns from labeled examples. Each data point comes with a correct answer.
+
+**Examples:**
+- **Classification**: Predicting whether an email is spam or not
+- **Regression**: Predicting house prices based on features like size, location, and age
+
+**Real-world applications:** Email filtering, medical diagnosis, credit scoring, image recognition
+
+### 2. Unsupervised Learning
+
+The algorithm finds patterns in unlabeled data without knowing the "correct" answer.
+
+**Common techniques:**
+- **Clustering**: Grouping similar items together
+- **Dimensionality reduction**: Simplifying complex data
+
+**Real-world applications:** Customer segmentation, recommendation systems, anomaly detection
+
+### 3. Reinforcement Learning
+
+The algorithm learns by interacting with an environment and receiving rewards or penalties for actions.
+
+**Real-world applications:** Game-playing AI, robotics, autonomous vehicles, recommendation systems
+
+## The Machine Learning Pipeline
+
+```
+1. Data Collection
+   ↓
+2. Data Preprocessing (cleaning, transformation)
+   ↓
+3. Feature Engineering (selecting relevant information)
+   ↓
+4. Model Selection (choosing the right algorithm)
+   ↓
+5. Training (feeding data to the model)
+   ↓
+6. Evaluation (testing on unseen data)
+   ↓
+7. Deployment (putting the model into production)
+```
+
+## Key Concepts
+
+### Training Data
+The examples used to teach the model. The more quality data you have, the better the model typically performs.
+
+### Features
+The input variables that the model uses to make predictions. Good feature engineering is crucial for success.
+
+### Model
+The mathematical representation that captures the learned patterns. It transforms input features into predictions.
+
+### Evaluation Metrics
+Methods to measure how well a model performs:
+- **Accuracy**: How many predictions were correct?
+- **Precision & Recall**: Useful for imbalanced datasets
+- **F1-Score**: A balanced measure of precision and recall
+
+### Overfitting
+When a model memorizes the training data instead of learning general patterns. It performs well on training data but poorly on new data.
+
+## Real-World Examples
+
+### Recommendation Systems
+Netflix uses ML to predict which movies you'll like based on your viewing history and similar users' preferences.
+
+### Natural Language Processing
+Google's translation service uses deep learning to understand language and provide accurate translations.
+
+### Computer Vision
+Self-driving cars use ML to recognize pedestrians, other vehicles, and road signs in real-time.
+
+### Predictive Maintenance
+Manufacturing companies use ML models to predict equipment failures before they happen, saving costs and downtime.
+
+## Why Machine Learning Matters
+
+1. **Handling complexity**: Patterns that are too complex for humans to code are easy for ML
+2. **Automation at scale**: Once trained, models can make millions of predictions instantly
+3. **Continuous improvement**: Models can be retrained with new data to adapt to changing patterns
+4. **Data insights**: ML can uncover hidden patterns that lead to business insights
+
+## Challenges and Considerations
+
+- **Data quality**: Garbage in, garbage out. Poor data leads to poor models
+- **Computational cost**: Training large models requires significant computing power
+- **Interpretability**: Deep learning models can be "black boxes" that are hard to understand
+- **Bias**: Models can perpetuate or amplify biases present in training data
+- **Deployment complexity**: Moving from a prototype to production is non-trivial
+
+## The Future of Machine Learning
+
+The field is rapidly evolving:
+- **Large Language Models (LLMs)**: GPT, Claude, and similar models show the power of scale
+- **Few-shot learning**: Models learning from minimal examples
+- **Federated learning**: Training on distributed data without centralizing it
+- **AutoML**: Automating the ML pipeline itself
+
+## Conclusion
+
+Machine Learning is no longer just academic theory—it's shaping how businesses operate and how we interact with technology. Whether you're interested in improving your career prospects, building better products, or simply understanding the technology around you, understanding ML fundamentals is increasingly essential.
+
+The journey into machine learning starts with understanding these basics. From here, you can dive deeper into specific algorithms, frameworks, and applications that interest you.
+
+**Happy learning!**
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"maxWidth":"900px","marginRight":"auto","marginLeft":"auto"},"children":[["$","header",null,{"style":{"marginBottom":"3rem","paddingTop":"2rem","paddingBottom":"2rem","background":"linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%)","borderRadius":"1rem","padding":"3rem"},"children":[["$","h1",null,{"style":{"fontSize":"3rem","fontWeight":"800","color":"#0f172a","marginBottom":"1rem","lineHeight":"1.1"},"children":"Blog"}],["$","p",null,{"style":{"fontSize":"1.125rem","color":"#475569","lineHeight":"1.6","maxWidth":"600px"},"children":"Thoughts and insights on AI, machine learning, and software engineering. Exploring production systems, LLMs, and clean architecture."}]]}],["$","$L2",null,{"blogs":[{"slug":"2026-06-15-getting-started","title":"Getting Started with This Portfolio","date":"$D2026-06-15T00:00:00.000Z","category":"Meta","description":"An overview of how this portfolio works and how to use it.","tags":["portfolio","nextjs","markdown"],"content":"\n# Getting Started\n\nWelcome to my portfolio! This is a simple markdown-based blog system built with Next.js.\n\n## How It Works\n\nEach blog post is written in Markdown with YAML frontmatter. The frontmatter contains:\n\n- **title**: The blog post title\n- **date**: Publication date (YYYY-MM-DD)\n- **category**: Category for filtering\n- **description**: Short summary\n- **tags**: Optional tags\n\n## Writing a New Post\n\n1. Create a new `.md` file in `public/blogs/`\n2. Add frontmatter at the top\n3. Write your post in Markdown\n4. The site automatically picks it up!\n\n## Features\n\n- Live markdown editor (local development)\n- Category-based filtering\n- Responsive design\n- Static export to GitHub Pages\n\nHappy blogging!\n"},{"slug":"2026-06-15-machine-learning-basics","title":"What is Machine Learning?","date":"$D2026-06-15T00:00:00.000Z","category":"AI & ML","description":"A comprehensive introduction to machine learning, covering fundamentals, types, and real-world applications.","tags":["machine-learning","ai","fundamentals"],"content":"$3"}],"categories":["AI & ML","Meta"]}]]}],["$L4"],"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"E-CZBHsN807DwDr-dM7n4"}
+4:["$","script","script-0",{"src":"/_next/static/chunks/00h8rt8jaj15n.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
