@@ -19,18 +19,49 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
   return (
     <div>
       {/* Category Filter */}
-      <div className="mb-12">
-        <h3 className="text-xs font-bold text-[#6b7280] uppercase tracking-widest mb-4">
+      <div style={{ marginBottom: '3rem' }}>
+        <h3 style={{
+          fontSize: '0.75rem',
+          fontWeight: 'bold',
+          color: '#6b7280',
+          textTransform: 'uppercase',
+          letterSpacing: '0.1em',
+          marginBottom: '1rem'
+        }}>
           Filter by Category
         </h3>
-        <div className="flex flex-wrap gap-3">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-              selectedCategory === null
-                ? 'bg-[#6366f1] text-white shadow-md'
-                : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1] hover:bg-gray-50'
-            }`}
+            style={{
+              padding: '0.625rem 1.5rem',
+              borderRadius: '9999px',
+              fontSize: '0.875rem',
+              fontWeight: '600',
+              transition: 'all 0.3s ease-in-out',
+              border: 'none',
+              cursor: 'pointer',
+              backgroundColor: selectedCategory === null ? '#10b981' : 'white',
+              color: selectedCategory === null ? 'white' : '#1f2937',
+              ...(selectedCategory === null && {
+                boxShadow: '0 4px 8px rgba(16, 185, 129, 0.25)'
+              }),
+              ...(selectedCategory !== null && {
+                border: '1px solid #e5e7eb'
+              })
+            }}
+            onMouseEnter={(e) => {
+              if (selectedCategory !== null) {
+                e.currentTarget.style.borderColor = '#10b981';
+                e.currentTarget.style.backgroundColor = '#f9fafb';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (selectedCategory !== null) {
+                e.currentTarget.style.borderColor = '#e5e7eb';
+                e.currentTarget.style.backgroundColor = 'white';
+              }
+            }}
           >
             All
           </button>
@@ -38,11 +69,32 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                selectedCategory === category
-                  ? 'bg-[#6366f1] text-white shadow-md'
-                  : 'bg-white text-[#1f2937] border border-[#e5e7eb] hover:border-[#6366f1] hover:bg-gray-50'
-              }`}
+              style={{
+                padding: '0.625rem 1.5rem',
+                borderRadius: '9999px',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                transition: 'all 0.3s ease-in-out',
+                border: selectedCategory === category ? 'none' : '1px solid #e5e7eb',
+                cursor: 'pointer',
+                backgroundColor: selectedCategory === category ? '#10b981' : 'white',
+                color: selectedCategory === category ? 'white' : '#1f2937',
+                ...(selectedCategory === category && {
+                  boxShadow: '0 4px 8px rgba(16, 185, 129, 0.25)'
+                })
+              }}
+              onMouseEnter={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.borderColor = '#10b981';
+                  e.currentTarget.style.backgroundColor = '#f9fafb';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.borderColor = '#e5e7eb';
+                  e.currentTarget.style.backgroundColor = 'white';
+                }
+              }}
             >
               {category}
             </button>
@@ -51,20 +103,52 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
       </div>
 
       {/* Blog List */}
-      <div className="space-y-10">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
         {filteredBlogs.length === 0 ? (
-          <p className="text-[#6b7280] text-lg">No blog posts found.</p>
+          <p style={{ color: '#6b7280', fontSize: '1.125rem' }}>No blog posts found.</p>
         ) : (
-          filteredBlogs.map((blog) => (
+          filteredBlogs.map((blog, index) => (
             <article
               key={blog.slug}
-              className="pb-10 border-b border-[#e5e7eb] last:border-b-0 hover:bg-gray-50 transition-colors p-4 -mx-4 rounded-lg"
+              style={{
+                backgroundColor: 'white',
+                border: '1px solid #e5e7eb',
+                borderRadius: '0.75rem',
+                padding: '1.5rem',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+                transition: 'all 0.3s ease-in-out',
+                cursor: 'pointer',
+                paddingBottom: index !== filteredBlogs.length - 1 ? '1.5rem' : '1.5rem'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.12)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.backgroundColor = '#f9fafb';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.backgroundColor = 'white';
+              }}
             >
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-xs font-bold text-[#6366f1] uppercase tracking-widest bg-[#f0f0ff] px-3 py-1 rounded-full">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                <span style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 'bold',
+                  color: '#1e40af',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  backgroundColor: '#dbeafe',
+                  padding: '0.25rem 0.75rem',
+                  borderRadius: '9999px'
+                }}>
                   {blog.category}
                 </span>
-                <time className="text-xs font-medium text-[#9ca3af]">
+                <time style={{
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  color: '#9ca3af'
+                }}>
                   {new Date(blog.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
@@ -72,15 +156,56 @@ export default function BlogList({ blogs, categories }: BlogListProps) {
                   })}
                 </time>
               </div>
-              <Link href={`/blog/${blog.slug}`}>
-                <h3 className="text-2xl font-bold text-[#1f2937] hover:text-[#6366f1] transition-colors mb-3">
+              <Link href={`/blog/${blog.slug}`} style={{ textDecoration: 'none' }}>
+                <h3 style={{
+                  fontSize: '2.5rem',
+                  fontWeight: 'bold',
+                  color: '#1f2937',
+                  marginBottom: '1rem',
+                  margin: 0,
+                  lineHeight: '1.3',
+                  transition: 'color 0.3s ease-in-out'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#10b981';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#1f2937';
+                }}>
                   {blog.title}
                 </h3>
               </Link>
-              <p className="text-[#6b7280] mb-5 text-lg leading-relaxed">{blog.description}</p>
+              <p style={{
+                color: '#6b7280',
+                marginBottom: '1.5rem',
+                fontSize: '1.125rem',
+                lineHeight: '1.8',
+                margin: '1rem 0 1.5rem 0'
+              }}>
+                {blog.description}
+              </p>
               <Link
                 href={`/blog/${blog.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#6366f1] hover:gap-3 transition-all uppercase tracking-wider"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontSize: '0.95rem',
+                  fontWeight: 'bold',
+                  color: '#6366f1',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  transition: 'all 0.3s ease-in-out'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#10b981';
+                  e.currentTarget.style.gap = '0.75rem';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#6366f1';
+                  e.currentTarget.style.gap = '0.5rem';
+                }}
               >
                 Read More <span>→</span>
               </Link>
