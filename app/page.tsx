@@ -67,14 +67,6 @@ export default function Home() {
           }}>
             I build AI systems that <span style={{ color: colors.primary }}>work in production</span>
           </h1>
-          <p style={{
-            fontSize: '1.125rem',
-            color: colors.muted,
-            marginBottom: '2rem',
-            lineHeight: '1.8'
-          }}>
-            {resumeData.summary}
-          </p>
           <Link
             href="/resume"
             className="cta-button"
