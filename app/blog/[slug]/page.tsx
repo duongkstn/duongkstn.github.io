@@ -14,6 +14,9 @@ interface Props {
 
 export async function generateStaticParams() {
   const blogs = getAllBlogs();
+  if (blogs.length === 0) {
+    return [{ slug: '__empty__' }];
+  }
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
