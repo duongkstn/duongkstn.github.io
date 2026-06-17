@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -20,7 +21,14 @@ export default function Header() {
         <div style={{maxWidth: '100%', paddingLeft: '1.5rem', paddingRight: '1.5rem'}}>
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             {/* Logo/Name */}
-            <Link href="/" style={{textDecoration: 'none', color: 'inherit'}}>
+            <Link href="/" style={{textDecoration: 'none', color: 'inherit', display: "inline-flex", alignItems: "center", gap: "8px",}}>
+              <Image
+                src="/favicon.ico"
+                alt="Logo"
+                width={24}
+                height={24}
+                priority
+              />
               <h1 style={{
                 fontSize: '1.125rem',
                 fontWeight: '700',
@@ -28,8 +36,11 @@ export default function Header() {
                 margin: 0,
                 letterSpacing: '-0.5px'
               }}>
-                Dao Nguyen Duong
+                Dao Nguyen Duong's Blog
               </h1>
+                
+              
+              
             </Link>
 
             {/* Navigation */}
@@ -55,6 +66,13 @@ export default function Header() {
               }}>
                 Resume
               </Link>
+              <Link href="/research" className="nav-link" style={{
+                fontSize: '0.875rem',
+                fontWeight: '500',
+                textDecoration: 'none'
+              }}>
+                Research
+              </Link>
               <Link href="/life" className="nav-link" style={{
                 fontSize: '0.875rem',
                 fontWeight: '500',
@@ -62,7 +80,7 @@ export default function Header() {
               }}>
                 My Life
               </Link>
-              <a
+              {/* <a
                 href="https://github.com/duongkstn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +92,7 @@ export default function Header() {
                 }}
               >
                 GitHub
-              </a>
+              </a> */}
             </nav>
           </div>
         </div>

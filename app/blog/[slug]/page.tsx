@@ -3,7 +3,7 @@ import BlogPost from '@/components/BlogPost';
 import { getBlogBySlug, getAllBlogs } from '@/lib/blog';
 
 export const metadata = {
-  title: 'Blog Post | Duong Nguyen',
+  title: 'Blog Post | Dao Nguyen Duong',
 };
 
 interface Props {

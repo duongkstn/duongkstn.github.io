@@ -1,7 +1,7 @@
 import BlogEditor from '@/components/BlogEditor';
 
 export const metadata = {
-  title: 'Blog Editor | Duong Nguyen',
+  title: 'Blog Editor | Dao Nguyen Duong',
 };
 
 export default function EditorPage() {

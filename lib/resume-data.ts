@@ -66,7 +66,6 @@ export const resumeData: ResumeData = {
 
   contact: {
     email: "nguyenduongyht@gmail.com",
-    phone: "(+84) 916 337 265",
     location: "Vietnam",
     linkedin: "https://www.linkedin.com/in/duongkstn/",
     github: "https://github.com/duongkstn"
@@ -134,7 +133,7 @@ export const resumeData: ResumeData = {
       field: "Electronics and Telecommunications",
       school: "Hanoi University of Science and Technology",
       year: "2019",
-      details: "Major: Electronics and Telecommunications - Talent Program | GPA: 3.30/4 | Period: Sep 2014 - Sep 2019"
+      details: "Major: Electronics and Telecommunications - Talent Program"
     }
   ],
 
@@ -165,7 +164,7 @@ export const resumeData: ResumeData = {
     },
     {
       category: "Cloud & Tools",
-      items: ["Kotaemo", "Langfuse", "Grafana", "Prometheus", "Docker", "Unstructured"]
+      items: ["Kotaemon", "Langfuse", "Grafana", "Prometheus", "Docker", "Unstructured"]
     }
   ],
 

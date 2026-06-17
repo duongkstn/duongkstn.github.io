@@ -34,15 +34,37 @@ export default function ProfileCard() {
         />
       </div>
 
-      {/* Name */}
-      <h2 style={{
-        fontSize: '1.125rem',
-        fontWeight: '700',
-        color: '#0f172a',
-        margin: 0,
-        marginBottom: '2rem'
-      }}>
-        Dao Nguyen Duong
+      <h2
+        style={{
+          margin: 0,
+          marginBottom: '1rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.25rem',
+        }}
+      >
+      <span
+        style={{
+          fontSize: '1.5rem',
+          fontWeight: 500,
+          color: '#0f172a',
+          letterSpacing: '-0.03em',
+          lineHeight: 1.1,
+        }}
+      >
+        Đào Nguyên Dương
+      </span>
+
+      <span
+        style={{
+          fontSize: '0.95rem',
+          fontWeight: 500,
+          color: '#64748b',
+          letterSpacing: '0.02em',
+        }}
+      >
+        @duongkstn
+      </span>
       </h2>
 
 
@@ -50,16 +72,16 @@ export default function ProfileCard() {
       <div style={{
         height: '1px',
         backgroundColor: '#e2e8f0',
-        marginBottom: '1.5rem'
+        marginBottom: '0.5rem'
       }}></div>
 
       {/* Info */}
-      <div style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '1.5rem' }}>
+      <div style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>
         <p style={{ margin: '0.5rem 0' }}>📍 Vietnam</p>
       </div>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: '#e2e8f0', marginBottom: '1.5rem' }}></div>
+      <div style={{ height: '1px', backgroundColor: '#e2e8f0', marginBottom: '0.5rem' }}></div>
 
       {/* Social Links */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
