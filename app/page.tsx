@@ -32,9 +32,30 @@ const cardStyle = {
 
 export default function Home() {
   return (
-    <div style={{ maxWidth: '900px', marginRight: 'auto', marginLeft: 'auto' }}>
+    <div style={{ maxWidth: '900px', marginRight: 'auto', marginLeft: 'auto', width: '100%' }}>
+      <style>{`
+        @media (max-width: 767px) {
+          .hero-section {
+            margin-left: -1rem !important;
+            margin-right: -1rem !important;
+            padding: 2rem 1.5rem !important;
+          }
+          .hero-title {
+            font-size: 2rem !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .hero-section {
+            margin-left: -1.5rem !important;
+            margin-right: -1.5rem !important;
+          }
+          .hero-title {
+            font-size: 2.75rem !important;
+          }
+        }
+      `}</style>
       {/* Hero Section */}
-      <section style={{
+      <section className="hero-section" style={{
         marginBottom: '4rem',
         paddingTop: '3rem',
         paddingBottom: '3rem',
@@ -57,7 +78,7 @@ export default function Home() {
           }}>
             Welcome
           </p>
-          <h1 style={{
+          <h1 className="hero-title" style={{
             fontSize: '3.5rem',
             fontWeight: '800',
             color: colors.dark,

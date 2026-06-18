@@ -25,7 +25,7 @@ export default function RootLayout({
         <Header />
         <div className="min-h-screen flex flex-col lg:flex-row">
           <ProfileCard />
-          <main className="flex-1 p-6 md:p-8 lg:p-12">
+          <main className="flex-1 p-4 md:p-6 lg:p-12 w-full">
             {children}
           </main>
         </div>

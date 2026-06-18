@@ -2,21 +2,70 @@
 
 export default function ProfileCard() {
   return (
-    <aside style={{
-      display: 'flex',
-      flexDirection: 'column',
-      width: '280px',
-      backgroundColor: '#f8fafc',
-      borderRight: '1px solid #e2e8f0',
-      padding: '2rem',
-      position: 'sticky',
-      top: '65px',
-      height: 'calc(100vh - 65px)',
-      overflowY: 'auto'
-    }}>
+    <>
+      <style>{`
+        @media (max-width: 1023px) {
+          .profile-card {
+            width: 100% !important;
+            position: static !important;
+            height: auto !important;
+            overflow-y: visible !important;
+            border-right: none !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1rem !important;
+            padding: 1.5rem 2rem !important;
+          }
+          .profile-card img {
+            width: 110px !important;
+            height: 110px !important;
+          }
+          .profile-card-image-wrapper {
+            margin-bottom: 0.5rem !important;
+          }
+          .profile-card-identity {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0 !important;
+          }
+          .profile-card-name {
+            margin-bottom: 0 !important;
+          }
+          .profile-card-name span:first-child {
+            font-size: 1.25rem !important;
+          }
+          .profile-card-divider {
+            display: none !important;
+          }
+          .profile-card-info {
+            margin-bottom: 0 !important;
+          }
+          .profile-card-social {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 0.5rem 1.5rem !important;
+            justify-content: center !important;
+            width: 100% !important;
+            max-width: 320px !important;
+          }
+        }
+      `}</style>
+      <aside className="profile-card" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '280px',
+        backgroundColor: '#f8fafc',
+        borderRight: '1px solid #e2e8f0',
+        padding: '2rem',
+        position: 'sticky',
+        top: '65px',
+        height: 'calc(100vh - 65px)',
+        overflowY: 'auto'
+      }}>
 
       {/* Profile Image */}
-      <div style={{
+      <div className="profile-card-image-wrapper" style={{
         display: 'flex',
         justifyContent: 'center',
         marginBottom: '1.5rem'
@@ -34,57 +83,57 @@ export default function ProfileCard() {
         />
       </div>
 
-      <h2
-        style={{
-          margin: 0,
-          marginBottom: '1rem',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.25rem',
-        }}
-      >
-      <span
-        style={{
-          fontSize: '1.5rem',
-          fontWeight: 500,
-          color: '#0f172a',
-          letterSpacing: '-0.03em',
-          lineHeight: 1.1,
-        }}
-      >
-        Đào Nguyên Dương
-      </span>
+      {/* Identity block */}
+      <div className="profile-card-identity" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '0.25rem',
+        marginBottom: '0.5rem',
+      }}>
+        <h2 className="profile-card-name"
+          style={{
+            margin: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.25rem',
+            alignItems: 'center',
+          }}
+        >
+        <span
+          style={{
+            fontSize: '1.5rem',
+            fontWeight: 500,
+            color: '#0f172a',
+            letterSpacing: '-0.03em',
+            lineHeight: 1.1,
+          }}
+        >
+          Đào Nguyên Dương
+        </span>
 
-      <span
-        style={{
-          fontSize: '0.95rem',
-          fontWeight: 500,
-          color: '#64748b',
-          letterSpacing: '0.02em',
-        }}
-      >
-        @duongkstn
-      </span>
-      </h2>
+        <span
+          style={{
+            fontSize: '0.95rem',
+            fontWeight: 500,
+            color: '#64748b',
+            letterSpacing: '0.02em',
+          }}
+        >
+          @duongkstn
+        </span>
+        </h2>
 
-
-      {/* Divider */}
-      <div style={{
-        height: '1px',
-        backgroundColor: '#e2e8f0',
-        marginBottom: '0.5rem'
-      }}></div>
-
-      {/* Info */}
-      <div style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>
-        <p style={{ margin: '0.5rem 0' }}>📍 Vietnam</p>
+        <div className="profile-card-info" style={{ fontSize: '0.875rem', color: '#64748b' }}>
+          <p style={{ margin: 0 }}>📍 Vietnam</p>
+        </div>
       </div>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: '#e2e8f0', marginBottom: '0.5rem' }}></div>
+      <div className="profile-card-divider" style={{ height: '1px', backgroundColor: '#e2e8f0', marginBottom: '0.5rem' }}></div>
 
       {/* Social Links */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div className="profile-card-social" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <a href="https://github.com/duongkstn" target="_blank" rel="noopener noreferrer" style={{
           display: 'flex',
           gap: '0.75rem',
@@ -143,5 +192,6 @@ export default function ProfileCard() {
         </a>
       </div>
     </aside>
+    </>
   );
 }
